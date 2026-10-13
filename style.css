@@ -1,0 +1,10 @@
+div img{   /*to selcct the child node for styling*/
+    width:75%;
+    height:75%;
+    border-radius:20px; /*curve*/
+    object-fit:cover;  /*to make sure image is not strecthed*/
+    margin-bottom:10px; /*space outside the box*/
+    border:2px solid rgb(7, 7, 7); /*to add border*/
+    border:none; /*to remove border*/
+    margin:30px;
+}
