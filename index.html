@@ -1,82 +1,101 @@
-//HTML - Hyper Text Markup Language <>
-- It is used for structure of web page 
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mern Class</title>
-    <link rel="stylesheet" href="style.css"> //external css
-    <style> /*internal css*/
-     h2{
-      color : rgb(149, 29, 49);
-      background-color : rgb(107, 124, 82);
-     }
-     strong{
-      color : rgb(247, 21, 59);
-      background-color : rgb(107, 124, 82);
-     }
-     .my-class{          /*class name*/ 
-      color : rgb(71, 203, 155);
-      background-color : rgb(107, 124, 82);
-     }
-     #style{ /*id name*/
-      color :blueviolet;
-      background-color : rgb(242, 246, 236);
-     }
-     h6,p,u,mark{
-      color : rgb(234, 223, 225);
-      background-color : rgb(207, 34, 120);
-     }
-     *{                    /*universal selector*/
-      font-family :cursive;
-      background-color : grey ;
-     }
-     #aaa,#bbb,#ccc,#ddd{
-      background-color: aliceblue;
-      font-family: Arial, Helvetica, sans-serif;
-      color:crimson
-     }
-     .test{ 
-      border:2px solid black;
-      margin:20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      gap:30px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-     }
-     .test:hover{
-      box-shadow: 4px 16px 32px rgba(0, 0, 0, 0.4);
-     }
-    </style>
- </head>
- <body>
-    <h1 style="color: blue; background-color: lightgray;">Welcome to Mern Class</h1> //inline css
-    <h2>Hi</h2>
-    <h3>Hi</h3>
-    <h4 class="my-class">Hi</h4>
-    <h5 id="style">Hi</h5>
-    <h6>Hi</h6>
-    <p>This is a paragraph and this is a simple web page.</p><br>
-    <strong>This is a strong text</strong> //bold text<br>
-    <em>This is a emphasized text</em> //italic text<br>
-    <u>This is an underlined text</u> //underlined text<br>
-    <mark>This is a marked text</mark> //highlighted text<br>
-    <div class="test">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="container">
-      <img src="https://th.bing.com/th/id/R.616a8f9fc897e4be3450e83cc349163b?rik=99NhcoYMbpPmbA&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f200876-nature-landscape-water.jpg&ehk=QcolhuooocpOvG0IUsYFYzY1xMzqLRuXNENX8S3%2btyI%3d&risl=&pid=ImgRaw&r=0">
-      <h2>Nature</h2>
-      <p>This is an image of nature.</p>
-      <span>Image ID: 12345</span>
+        <header>
+            <div>
+                <h1>Expense Tracker</h1>
+                <p>Track your expenses with ease</p>
+            </div>
+            <div class="profile">C
+            </div>
+        </header>
+        <section class="summary">
+             <p>Total Expenses</p>
+             <h2>$12,000</h2>
+             <span>This month</span>
+        </section>
+        <section class="overview">
+            <div class="cards">
+                <div  class="icon">↗️</div>
+                <p>Total Income</p>
+                <h3>$15,000</h3>
+            </div>
+            <div class="cards">
+                <div  class="icon">↘️</div>
+                <p>Total Expenses</p>
+                <h3>$12,000</h3>
+            </div>
+            <div class="cards">
+                <div class="icon">$</div>
+                <p>Balance</p>
+                <h3>$3,000</h3>
+            </div>
+        </section>
+        <section class="add-expense">
+            <h2>Add New Expense</h2>
+            <form>
+                <div class="form-group">
+                    <label>Expense Name</label>
+                    <input type="text" placeholder="eg. Groceries" required>
+                </div>
+                <div class="form-group">
+                    <label>Amount($)</label>
+                    <input type="number" placeholder="Enter Amount" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select required>
+                        <option>Select Category</option>
+                        <option>Food</option>
+                        <option>Transport</option>
+                        <option>Entertainment</option>
+                        <option>Utilities</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" required>
+                    </div>
+                <button type="submit">+ Add Expense</button>
+            </form>
+        </section>
+        <section class="transactions">
+            <div class="section-heading">
+                <h2>Recent Transactions</h2>
+                <p>View All</p>
+            </div>
+            <div class="list">
+                <div class="expense-icon">F</div>
+                <div class="expense-details">
+                    <p>Food&Grocceries</p>
+                    <span>Jan 10, 2024</span>
+                </div>
+            
+                <div class="expense-icon">T</div>
+                <div class="expense-details">
+                    <p>Transportation</p>
+                    <span>Jan 12, 2024</span>
+                </div>
+                <div class="expense-icon">S</div>
+                <div class="expense-details">
+                    <p>Shopping</p>
+                    <span>Jan 13, 2024</span>
+                </div>
+                <div class="expense-icon">C</div>
+                <div class="expense-details">
+                    <p>Course Materials</p>
+                    <span>Jan 22, 2024</span>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="eng">
-      <img id="aaa" src="https://wallpapers.com/images/featured/most-beautiful-nature-hdb30wtkjbn08xlf.jpg">
-      <h2 id="bbb">GRASS</h2>
-      <p id="ccc">FAvourite one</p>
-      <u id="ddd">Nature Images</u>
-   </div>
-</div>
- </body>
- </html>
+</body>
+</html>
